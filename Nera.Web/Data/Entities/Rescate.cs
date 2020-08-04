@@ -18,8 +18,8 @@ namespace Nera.Web.Data.Entities
         [Display(Name = "Imagen")]
         public string ImageUrl { get; set; }
 
-        [MaxLength(50, ErrorMessage = "The {0} field can not have more than {1} characters.")]
-        public string TipoRescate { get; set; }
+       // [MaxLength(50, ErrorMessage = "The {0} field can not have more than {1} characters.")]
+       // public string TipoRescate { get; set; }
 
        
         [Display(Name = "Fecha")]
@@ -35,5 +35,12 @@ namespace Nera.Web.Data.Entities
         public string ImageFullPath => string.IsNullOrEmpty(ImageUrl)
             ? null
             : $"https://TDB.azurewebsites.net{ImageUrl.Substring(1)}";
+
+        public TipoRescate TipoRescate { get; set; }
+
+        public Rescatista Rescatista { get; set; }
+
+        public ICollection<RegistroRescate> RegistroRescates { get; set; }
+
     }
 }

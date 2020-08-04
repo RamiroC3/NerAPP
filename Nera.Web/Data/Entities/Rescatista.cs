@@ -29,15 +29,12 @@ namespace Nera.Web.Data.Entities
         public string ApellidoMaterno { get; set; }
 
         [MaxLength(15, ErrorMessage = "El {0} no puede contener mas de {1} Caracteres.")]
-        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public string Telefono { get; set; }
 
         [MaxLength(15, ErrorMessage = "El {0} no puede contener mas de {1} Caracteres.")]
-        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public string Celular { get; set; }
 
         [MaxLength(100, ErrorMessage = "El {0} no puede contener mas de {1} Caracteres.")]
-        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public string Direccion { get; set; }
 
         [Display(Name = "Rescatista")]
@@ -46,6 +43,6 @@ namespace Nera.Web.Data.Entities
         [Display(Name = "Rescatista")]
         public string NombreCompletoRut => $"{Nombres} {ApellidoPaterno} {ApellidoMaterno} - {Rut}";
 
-
+        public ICollection<Rescate> Rescates { get; set; }
     }
 }

@@ -16,5 +16,6 @@ namespace Nera.Web.Data.Entities
         [Required(ErrorMessage = "El Campo {0} es obligatorio.")]
         public string Nombre { get; set; }
 
+        public ICollection<RegistroRescate> RegistroRescates { get; set; }
     }
 }

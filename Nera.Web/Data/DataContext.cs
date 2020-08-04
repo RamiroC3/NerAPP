@@ -13,5 +13,14 @@ namespace Nera.Web.Data
         {    
         }
         public DbSet<Rescatista> Rescatistas { get; set; }
+
+        public DbSet<TipoRescate> TipoRescates { get; set; }
+
+        public DbSet<Rescate> Rescates { get; set; }
+
+        public DbSet<RegistroRescate> RegistroRescates { get; set; }
+
+        public DbSet<Vehiculo> Vehiculos { get; set; }
+
     }
 }

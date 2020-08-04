@@ -31,6 +31,10 @@ namespace Nera.Web.Data.Entities
         [Display(Name = "Fecha*")]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd HH:mm}", ApplyFormatInEditMode = true)]
         public DateTime DateLocal => Date.ToLocalTime();
+
+        public Vehiculo Vehiculo { get; set; }
+
+        public Rescate Rescate { get; set; }
     }
 }
 
